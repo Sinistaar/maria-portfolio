@@ -1,0 +1,441 @@
+/* Projects Section Styles */
+.projects {
+  padding: var(--spacing-lg);
+  background: transparent;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 0;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--color-secondary);
+  border-radius: 2px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--color-neutral);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Featured Project */
+.featuredProject {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.projectCard {
+  background: var(--color-background);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+}
+
+/* Project Header */
+.projectHeader {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #2980b9 100%);
+  color: var(--color-white);
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.projectIcon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.projectMeta {
+  flex-grow: 1;
+}
+
+.projectTitle {
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-white);
+}
+
+.projectDetails {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.projectDate,
+.projectLocation,
+.projectRole {
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Project Content */
+.projectContent {
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.projectDescription h4,
+.projectHighlights h4,
+.projectImpact h4 {
+  color: var(--color-primary);
+  font-size: 1.4rem;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--color-secondary);
+  display: inline-block;
+}
+
+.projectDescription p {
+  color: var(--color-neutral);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+/* Highlights */
+.highlightsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.highlight {
+  display: flex;
+  gap: var(--spacing-md);
+  background: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.highlightIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: var(--spacing-xs);
+}
+
+.highlightContent h5 {
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.highlightContent p {
+  color: var(--color-neutral);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Impact Metrics */
+.impactMetrics {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.metric {
+  text-align: center;
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  min-width: 150px;
+  transition: all 0.3s ease;
+}
+
+.metric:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.metricValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.metricLabel {
+  font-size: 0.9rem;
+  color: var(--color-neutral);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.impactDescription {
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--color-secondary);
+}
+
+.impactDescription p {
+  color: var(--color-neutral);
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+/* Project Skills */
+.projectSkills {
+  background: var(--color-background);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.skillsTitle {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.skillItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-secondary);
+}
+
+.skillItem .skillIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.skillItem span {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Call to Action */
+.projectCta {
+  background: linear-gradient(135deg, var(--color-secondary) 0%, #2980b9 100%);
+  color: var(--color-white);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.ctaContent h3 {
+  font-size: 1.8rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-white);
+}
+
+.ctaContent p {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ctaContent .btn {
+  background: var(--color-white);
+  color: var(--color-secondary);
+  font-weight: 600;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.ctaContent .btn:hover {
+  background: var(--color-background);
+  transform: translateY(-2px);
+  color: var(--color-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .highlightsList {
+    grid-template-columns: 1fr;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+  
+  .impactMetrics {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: var(--spacing-xl) 0;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .projectHeader {
+    padding: var(--spacing-lg);
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .projectTitle {
+    font-size: 1.75rem;
+  }
+  
+  .projectDetails {
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .projectContent {
+    padding: var(--spacing-lg);
+    gap: var(--spacing-lg);
+  }
+  
+  .highlightsList {
+    gap: var(--spacing-md);
+  }
+  
+  .highlight {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .impactMetrics {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+  }
+  
+  .metric {
+    min-width: 120px;
+  }
+  
+  .metricValue {
+    font-size: 2rem;
+  }
+  
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .projectSkills {
+    padding: var(--spacing-lg);
+  }
+  
+  .projectCta {
+    padding: var(--spacing-lg);
+  }
+  
+  .ctaContent h3 {
+    font-size: 1.5rem;
+  }
+  
+  .ctaContent p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectHeader {
+    padding: var(--spacing-md);
+  }
+  
+  .projectIcon {
+    font-size: 2.5rem;
+  }
+  
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+  
+  .projectDetails {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .projectContent {
+    padding: var(--spacing-md);
+  }
+  
+  .highlight {
+    padding: var(--spacing-sm);
+  }
+  
+  .impactDescription {
+    padding: var(--spacing-md);
+  }
+  
+  .skillItem {
+    padding: var(--spacing-sm);
+  }
+  
+  .projectCta {
+    padding: var(--spacing-md);
+  }
+}

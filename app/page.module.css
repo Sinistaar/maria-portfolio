@@ -1,0 +1,124 @@
+/* Puzzle Grid Layout Styles */
+.puzzleGrid {
+  background: var(--color-background);
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  height: 100%;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: var(--spacing-md);
+  min-height: calc(100vh - 140px); /* Account for hero and navigation */
+}
+
+/* Grid Item Base Styles */
+.gridItem {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.gridItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* About Section - Large left area */
+.aboutSection {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  background: linear-gradient(135deg, var(--color-white) 0%, var(--color-background) 100%);
+  display: flex;
+  align-items: stretch;
+}
+
+/* Experience Section - Tall right area */
+.experienceSection {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background: linear-gradient(180deg, var(--color-white) 0%, rgba(52, 152, 219, 0.05) 100%);
+  display: flex;
+  align-items: stretch;
+}
+
+/* Projects Section - Wide bottom left */
+.projectsSection {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: linear-gradient(45deg, var(--color-background) 0%, var(--color-white) 100%);
+  display: flex;
+  align-items: stretch;
+  min-height: 400px;
+}
+
+/* Contact Section - Small bottom right (overlaps with Experience) */
+.contactSection {
+  display: none; /* We'll integrate this into the Experience section */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .gridLayout {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-sm);
+  }
+  
+  .gridLayout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: var(--spacing-sm);
+    min-height: auto;
+  }
+  
+  .aboutSection {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .experienceSection {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  
+  .projectsSection {
+    grid-column: 1;
+    grid-row: 3;
+    min-height: 300px;
+  }
+  
+  .contactSection {
+    display: flex;
+    grid-column: 1;
+    grid-row: 4;
+    background: var(--color-white);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-xs);
+  }
+  
+  .gridLayout {
+    gap: var(--spacing-xs);
+  }
+  
+  .projectsSection {
+    min-height: 250px;
+  }
+}
